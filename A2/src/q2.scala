@@ -1,5 +1,6 @@
 /**
   * Top level class representing all types of AST Nodes
+  * @author Kevin Laframboise - 260687529
   */
 abstract class ASTNode
 
@@ -20,8 +21,12 @@ abstract class ASTNodeNonTerminal(val children: List[ASTNode]) extends ASTNode {
     * @return a string representation of the list of children
     */
   override def toString: String = {
-    val childrenStrings = children.map(x => x.toString) //get string for every children
-    childrenStrings.mkString(" ") //convert list of string into single string
+    if(children == null) ""
+    else {
+      val childrenStrings = children.map(x => x.toString) //get string for every children
+      childrenStrings.mkString(" ") //convert list of string into single string
+    }
+
   }
 
 }

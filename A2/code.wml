@@ -1,0 +1,2 @@
+outertext {{ {{{ varname }}} | more i text }}}
+{'this is a template definition | with params || this the body of the template'}
